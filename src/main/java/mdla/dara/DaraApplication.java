@@ -24,6 +24,7 @@ public class DaraApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         repositoryRestConfiguration.exposeIdsFor(Membre.class, Cotisation.class, Paiement.class);
-      // implemInitService.initMdla();
+
+//        implemInitService.initMdla();
     }
 }

@@ -27,11 +27,7 @@ public class MembreRestController {
     public MembreRestController(MembreRepository membreRepository) {
         this.membreRepository = membreRepository;
     }
-    /*@GetMapping(path = "/photoMembre/{id}", produces = MediaType.IMAGE_PNG_VALUE)
-    public byte[] getPhoto(@PathVariable("id") Long id) throws Exception{
-        Membre mbre= membreRepository.findById(id).get();
-        return  Files.readAllBytes(Paths.get(System.getProperty("user.home")+"/Documents/Holbah/photosApp/dara/"+mbre.getPhotoName()));
-    }*/
+
     @GetMapping(path = "/photoMembre/{id}", produces = MediaType.IMAGE_PNG_VALUE)
     public byte[] getPhoto(@PathVariable("id") Long id) throws Exception{
         Membre mbre= membreRepository.findById(id).get();

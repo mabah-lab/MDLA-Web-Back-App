@@ -1,0 +1,18 @@
+spring:
+  sql:
+    init:
+      platform: postgresql
+  datasource:
+    url: jdbc:postgresql://ec2-34-250-92-138.eu-west-1.compute.amazonaws.com:5432/dcnhrmaavgoi07
+    username: thjmconautapue
+    password: a14dcacae7e559c0b15ae353d96c929e7d66227bce4da16d6c262d14509767ee
+  jpa:
+    hibernate:
+      #      default_schema: public
+      ddl-auto: validate
+    database-platform: org.hibernate.dialect.PostgreSQL95Dialect
+  mvc:
+    throw-exception-if-no-handler-found: true
+  web:
+    resources:
+      add-mappings: false
