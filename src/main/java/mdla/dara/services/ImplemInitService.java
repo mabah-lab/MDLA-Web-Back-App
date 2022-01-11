@@ -28,8 +28,8 @@ public class ImplemInitService implements InitialisationService{
     public void initMdla() {
         Obligation obligation= obligationRepository.save(new Obligation(null,new Date(),null,5.0));
 
-        Membre m1= membreRepository.save(new Membre(null,"bah","mamadou","D001",new Date(),025436661,"rue dAnderlecht 75, 1000 Bruxelles","homme","unknownAvatar",null,null,null));
-        Membre m2= membreRepository.save(new Membre(null,"Diallo","Lamarana","D002",new Date(),025632546,"rue lefranc 3, 1030 Bruxelles","homme" ,"unknownAvatar",null,null,null));
+        Membre m1= membreRepository.save(new Membre(null,"bah","mamadou","D001",new Date(),025436661,"rue dAnderlecht 75, 1000 Bruxelles","Homme","unknownAvatar",null,null,null));
+        Membre m2= membreRepository.save(new Membre(null,"Diallo","Lamarana","D002",new Date(),025632546,"rue lefranc 3, 1030 Bruxelles","Homme" ,"unknownAvatar",null,null,null));
         Membre m3= membreRepository.save(new Membre(null,"Sow","oumou","D003",new Date(),025431756,"avenue bailli 8, 1050 Ixelles","Femme","unknownAvatar",null,null,null));
 
         Inscription i1= inscriptionRepository.save(new Inscription(null,new Date(),"actif",m1));
