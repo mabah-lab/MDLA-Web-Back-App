@@ -31,7 +31,7 @@ public class MembreRestController {
     @GetMapping(path = "/photoMembre/{id}", produces = MediaType.IMAGE_PNG_VALUE)
     public byte[] getPhoto(@PathVariable("id") Long id) throws Exception{
         Membre mbre= membreRepository.findById(id).get();
-        Path imagePath= get("/src/images/photosApp/users/"+mbre.getPhotoName());
+        Path imagePath= get("src/images/photosApp/users/"+mbre.getPhotoName());
         if(!Files.exists(imagePath)){
             throw new FileNotFoundException(mbre.getPhotoName()+" non trouvé");
         }
@@ -41,7 +41,7 @@ public class MembreRestController {
     public void uploadPhoto(MultipartFile file,@PathVariable("id") Long id) throws Exception{
         Membre mbre= membreRepository.findById(id).get();
         mbre.setPhotoName(id+".png");
-        Files.write(get("/src/images/photosApp/users/"+id+".png"),file.getBytes());
+        Files.write(get("src/images/photosApp/users/"+id+".png"),file.getBytes());
         membreRepository.save(mbre);
     }
     @PostMapping(path = "/addMembre")
